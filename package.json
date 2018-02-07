@@ -1,0 +1,40 @@
+{
+  "name": "protvista-pdbe-track",
+  "version": "0.0.1",
+  "description": "Extended track type of the viewer.",
+  "main": "dist/protvista-pdbe-track.js",
+  "module": "src/index.js",
+  "jsnext:main": "src/index.js",
+  "repository": {
+    "type": "",
+    "url": "https://github.com/sreenathnair/protvista-pdbe-track.git"
+  },
+  "scripts": {
+    "build": "rimraf ./dist && mkdirp ./dist && rollup -c",
+    "rollup-watch": "rollup -cw",
+    "browser-sync": "browser-sync start --server -f dist/**/*.*",
+    "serve": "npm run rollup-watch & npm run browser-sync"
+  },
+  "author": "Sreenath Nair <sreenath@ebi.ac.uk>",
+  "license": "MIT",
+  "devDependencies": {
+    "@webcomponents/webcomponentsjs": "^1.0.19",
+    "babel-cli": "^6.24.1",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-custom-element-classes": "^0.1.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "browser-sync": "^2.18.12",
+    "mkdirp": "^0.5.1",
+    "protvista-zoomable": "0.0.1",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.49.3",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-node-resolve": "^3.0.0"
+  },
+  "dependencies": {
+    "d3": "^4.9.1",
+    "lodash-es": "^4.17.4"
+  }
+}
